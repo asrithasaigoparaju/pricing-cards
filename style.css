@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 55px 20px;
+  background: #f5f7fc;
+  color: #14213d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.eyebrow {
+  color: #4b5df5;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+h1 {
+  margin: 15px 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -1.5px;
+}
+
+.page-header > p:not(.eyebrow) {
+  color: #71809c;
+  line-height: 1.6;
+}
+
+.billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#monthly-label,
+#yearly-label {
+  color: #7b879c;
+}
+
+#monthly-label.selected,
+#yearly-label.selected {
+  color: #243250;
+  font-weight: bold;
+}
+
+.toggle {
+  width: 54px;
+  height: 30px;
+  padding: 3px;
+  border: 0;
+  border-radius: 30px;
+  background: #cbd3e5;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.toggle[aria-checked="true"] {
+  background: #4b5df5;
+}
+
+.toggle-knob {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 4px #0002;
+  transition: transform 0.25s ease;
+}
+
+.toggle[aria-checked="true"] .toggle-knob {
+  transform: translateX(24px);
+}
+
+.save-note {
+  color: #079b6b;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 32px 26px;
+  border: 1px solid #e0e6f2;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px #203a5b08;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 38px #203a5b16;
+}
+
+.pricing-card.popular {
+  border: 2px solid #5b62fa;
+  box-shadow: 0 12px 35px #5b62fa18;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 9px 13px;
+  border-radius: 0 0 10px 10px;
+  background: #555df5;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.value-ribbon {
+  background: #d9f9ec;
+  color: #087d59;
+}
+
+.plan-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+.starter-icon {
+  background: #e2f9ee;
+  color: #079b6b;
+}
+
+.pro-icon {
+  background: #e9eaff;
+  color: #555df5;
+}
+
+.business-icon {
+  background: #d9f9ec;
+  color: #079b6b;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.description {
+  min-height: 42px;
+  color: #75819a;
+  line-height: 1.5;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 26px;
+}
+
+.amount {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+
+.period {
+  color: #75819a;
+  font-size: 0.9rem;
+}
+
+.billing-note {
+  min-height: 20px;
+  margin: 8px 0 22px;
+  color: #75819a;
+  font-size: 0.8rem;
+}
+
+.plan-button {
+  display: block;
+  padding: 13px 10px;
+  border: 1px solid #d0d8e8;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.secondary {
+  background: white;
+  color: #243250;
+}
+
+.secondary:hover {
+  background: #f0f3ff;
+}
+
+.primary {
+  background: #4b5df5;
+  border-color: #4b5df5;
+  color: white;
+}
+
+.primary:hover {
+  background: #3547dd;
+}
+
+ul {
+  display: grid;
+  gap: 17px;
+  padding: 25px 0 0;
+  margin: 28px 0 0;
+  border-top: 1px solid #e9edf5;
+  list-style: none;
+  color: #52617c;
+  font-size: 0.9rem;
+}
+
+ul li::first-letter {
+  color: #079b6b;
+}
+
+.disclaimer {
+  margin-top: 35px;
+  text-align: center;
+  color: #8994a8;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 850px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .business {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 35px 14px;
+  }
+
+  .page-header {
+    margin-bottom: 35px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .business {
+    grid-column: auto;
+  }
+
+  .pricing-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

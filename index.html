@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare flexible pricing plans for every team.">
+  <title>Pricing Plans | CloudFlow</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">PRICING PLANS</p>
+      <h1>Simple, Transparent Pricing</h1>
+      <p>Choose the right plan for your needs.</p>
+
+      <div class="billing">
+        <span id="monthly-label" class="selected">Monthly</span>
+        <button
+          type="button"
+          id="billing-toggle"
+          class="toggle"
+          role="switch"
+          aria-checked="false"
+          aria-label="Switch to yearly billing"
+        >
+          <span class="toggle-knob"></span>
+        </button>
+        <span id="yearly-label">Yearly</span>
+        <span class="save-note">Save 20%</span>
+      </div>
+    </header>
+
+    <section class="pricing-grid" aria-label="Pricing plans">
+      <article class="pricing-card">
+        <div class="plan-icon starter-icon">✦</div>
+        <h2>Starter</h2>
+        <p class="description">Perfect for getting started.</p>
+
+        <div class="price">
+          <span class="amount" data-monthly="0" data-yearly="0">$0</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="billing-note">Free forever</p>
+
+        <a class="plan-button secondary" href="mailto:hello@example.com?subject=Starter%20Plan">
+          Get Started
+        </a>
+
+        <ul>
+          <li>✓ Up to 5 projects</li>
+          <li>✓ 1 GB storage</li>
+          <li>✓ Basic analytics</li>
+          <li>✓ Community support</li>
+        </ul>
+      </article>
+
+      <article class="pricing-card popular">
+        <span class="ribbon">★ Popular</span>
+        <div class="plan-icon pro-icon">♛</div>
+        <h2>Pro</h2>
+        <p class="description">For growing teams and creators.</p>
+
+        <div class="price">
+          <span class="amount" data-monthly="19" data-yearly="15">$19</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="billing-note" data-note="pro">Billed monthly</p>
+
+        <a class="plan-button primary" href="mailto:hello@example.com?subject=Pro%20Plan">
+          Choose Pro
+        </a>
+
+        <ul>
+          <li>✓ Up to 50 projects</li>
+          <li>✓ 100 GB storage</li>
+          <li>✓ Advanced analytics</li>
+          <li>✓ Priority support</li>
+          <li>✓ Team collaboration</li>
+        </ul>
+      </article>
+
+      <article class="pricing-card business">
+        <span class="ribbon value-ribbon">◆ Best Value</span>
+        <div class="plan-icon business-icon">◇</div>
+        <h2>Business</h2>
+        <p class="description">For teams ready to scale.</p>
+
+        <div class="price">
+          <span class="amount" data-monthly="39" data-yearly="31">$39</span>
+          <span class="period">/month</span>
+        </div>
+        <p class="billing-note" data-note="business">Billed monthly</p>
+
+        <a class="plan-button secondary" href="mailto:hello@example.com?subject=Business%20Plan">
+          Choose Business
+        </a>
+
+        <ul>
+          <li>✓ Unlimited projects</li>
+          <li>✓ 1 TB storage</li>
+          <li>✓ Full analytics suite</li>
+          <li>✓ Dedicated support</li>
+          <li>✓ Custom integrations</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="disclaimer">
+      Demo pricing for a portfolio project. No payment is collected.
+    </p>
+  </main>
+</body>
+</html>
